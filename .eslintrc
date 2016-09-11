@@ -1,0 +1,67 @@
+{
+  "extends": "airbnb",
+  "parser": "babel-eslint",
+  "parserOptions": {
+      "ecmaVersion": 6,
+      "sourceType": "module",
+      "ecmaFeatures": {
+          "experimentalObjectRestSpread": true,
+          "jsx": true
+      }
+  },
+  "env": {
+    "browser": true,
+    "es6": true,
+    "node": true
+  },
+  "globals": {
+    "document": true,
+    "navigator": false,
+    "window": true
+  },
+  "plugins": [
+    //The eslint-plugin- prefix can be omitted from the plugin name.
+    # "standard",
+    # "promise",
+    // enable react plugin,eslint-plugin-react
+    # "react"
+  ],
+  "rules": {
+    "spaced-comment": [0],
+    "no-unused-vars": [0],
+    "no-empty": [0],
+    "react/wrap-multilines": [0],
+    "react/no-multi-comp": [0],
+    "no-constant-condition": [0],
+    "react/jsx-no-bind": [0],
+    "react/prop-types": [0],
+    "arrow-body-style": [0],
+    "react/prefer-stateless-function": [0],
+    "react/sort-comp":[0],
+    "semi": [0],
+    "object-curly-spacing": [0, "always"],
+    "react/jsx-space-before-closing":[0,"never"],
+    "react/jsx-closing-bracket-location": [1, {selfClosing: 'after-props'}],
+    "max-len":[1,120],
+    "quotes":[0],
+    "comma-dangle":[1,"never"],
+    "no-useless-constructor":[0],
+    "func-names":[1,"never"],
+    "prefer-arrow-callback":[0],
+    "no-param-reassign":[0, { "props": false }],
+    "space-before-function-paren":[0],
+    'quote-props': [1, 'consistent-as-needed', { 'keywords': false, 'unnecessary': true, 'numbers': false }],
+    "strict": ["error", "function"],
+    "eol-last":[0],
+    "object-shorthand":[1, "always", { "avoidQuotes": true }],
+    "no-script-url":[0],
+    "new-cap":[1],
+    "prefer-template":[1],
+    # "no-undef":[1]
+  },
+  # eslint-plugin-import配置,
+  # https://www.npmjs.com/package/eslint-plugin-import#resolvers
+  "settings":{
+    import/core-modules: [ "panejs" ]
+  }
+}
